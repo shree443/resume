@@ -1,0 +1,488 @@
+/* Service Section */
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #ffffff;
+    --accent-color: #161616;
+    --text-color: #3b3f58;;
+    --border-color: #ffffff;
+}
+
+#services {
+    padding: 50px 20px;
+    background-color: var(--primary-color); /* Matches the website's main background color */
+    color: var(--text-color); /* Matches the website's text color */
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+#services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: var(--accent-color); /* Matches the accent color of the website */
+    font-family: 'Source Code Pro', monospace;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: var(--secondary-color); /* Matches the secondary background color */
+    color: var(--text-color); /* Ensures text is readable against the dark background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border-color); /* Matches border style with the rest of the website */
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-item h3 {font-family: 'Poppins', sans-serif;
+    color: black; /* Matches the accent color */
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.service-item p {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+.service-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #303030; /* Matches button color with the rest of the website */
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.service-btn:hover {
+    background-color: #141414;
+    transform: scale(1.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    
+}
+
+header {
+    background-color: #3b3f58;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.social-icons-header {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons-header img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons-header img:hover {
+    transform: scale(1.2);
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-image-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 5px solid #fff;
+}
+
+.profile-image-container:hover .profile-image {
+    transform: scale(1.3);
+}
+
+.speech-bubble {
+    display: none;
+    position: absolute;
+    bottom:105%;
+    left: 150%; /* Adjusted to move the bubble right */
+    transform: translateX(-60%); /* Adjusted to center relative to the left position */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.profile-image-container:hover .speech-bubble {
+    display: block;
+}
+
+
+
+.intro-info h2 {
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+.intro-info p {
+    margin: 0;
+    font-weight: 300;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6c63ff;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #5753c9;
+    transform: scale(1.15);
+}
+
+#intro {
+    padding: 50px 20px;
+    background-color: #fff;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#intro:hover {
+    transform: scale(1.05);
+}
+
+#intro h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #3b3f58;
+}
+
+#projects {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #3b3f58;
+}
+
+.projects-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 0 10px;
+    white-space: nowrap;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.projects-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.project-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 0 0 auto;
+    width: 80vw;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s;
+}
+
+.project-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    background: #000; /* Black background to cover empty space */
+    overflow: hidden; /* Hide overflow to keep layout tidy */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+    display: none; /* Hide the video by default */
+}
+
+.video-container:hover video {
+    display: block; /* Show video on hover */
+}
+.video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.video-container:hover .video-thumbnail {
+    opacity: 0; /* Hide the thumbnail when hovering */
+}
+
+.video-container video.playing {
+    display: block; /* Show the video when it is playing */
+}
+
+.video-container video:not(.playing) {
+    display: none; /* Hide the video when not playing */
+}
+
+
+.project-item .desc {
+    padding: 15px;
+    background-color: #fff;
+    flex-grow: 1;
+    height: 300px; /* Adjust height as needed */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+    position: relative;
+}
+
+.project-item .desc:hover {
+    cursor: pointer;
+}
+#skills {
+    background-color: #fff; /* Adjust background color as needed */
+    padding: 40px 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.skill-bar {
+    height: 20px;
+    background-color: #3b3f58; /* Background color for the bar */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 0; /* Start with 0 width */
+    transition: width 1.5s ease; /* Smooth transition */
+}
+
+.skill-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: #ff4500; /* Customize the color of the progress */
+    width: 0; /* Start with 0 width */
+    transition: width 1.5s ease;
+}
+
+
+#education {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#education h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #3b3f58;
+}
+
+.education-item {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+#languages {
+    background-color: #ffffff; /* Same background as other sections */
+    padding: 40px 0;
+}
+
+.languages-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.language-item {
+    text-align: center;
+    position: relative;
+    width: 120px; /* Make sure to adjust width to fit circle */
+    height: 120px; /* Make sure to adjust height to fit circle */
+}
+
+.language-item h3 {
+    margin-bottom: 10px; /* Spacing between the text and the circle */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;cursor: pointer;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 3.8;
+}
+
+.circle-progress {cursor: pointer;
+    fill: none;
+    stroke: #333; /* Customize the color of the progress */
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    stroke-dasharray: 0, 100; /* Start with 0 progress */
+    transition: stroke-dasharray 1.5s ease; /* Smooth transition */
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+/* Hover effect applied to the entire language-item */
+.language-item:hover .circle-progress {
+    stroke-dasharray: var(--percentage), 100; /* Animate to the correct percentage */
+}
+
+.percentage-text {
+    fill: #333; /* Text color */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+#intro {
+    position: relative;
+    padding: 40px 0;
+    background-color: #f9f9f9; /* Adjust to match your theme */
+    text-align: center; /* Center the text */
+}
+
+.eyes-container {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the eyes */
+}
+
+.eye {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid black;
+}
+
+.pupil {
+    width: 12px; /* Adjust size as needed */
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+}
