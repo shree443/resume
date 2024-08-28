@@ -465,3 +465,29 @@ footer {
     transform: translate(-50%, -50%);
     transition: transform 0.1s;
 }
+.message-bubble {
+    display: none;
+    position: absolute;
+    background-color:#3b3f58;
+    color: #fff;
+    padding: 11px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears on top */
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+}
+
+
+.message-bubble.show-message {
+    display: block;
+    opacity: 1;
+}
+
+.message-bubble.hide-message {
+    opacity: 0;
+}
+
