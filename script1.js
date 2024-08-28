@@ -54,25 +54,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
-    const newSectionContainer = document.querySelector('.new-section-container');
+    const projectsContainer = document.querySelector('.projects-container');
 
-    // Smooth scrolling based on cursor position within the new section container
-    newSectionContainer.addEventListener('mousemove', (event) => {
-        const containerWidth = newSectionContainer.offsetWidth;
-        const containerLeft = newSectionContainer.getBoundingClientRect().left;
+    // Smooth scrolling based on cursor position within the projects container
+    projectsContainer.addEventListener('mousemove', (event) => {
+        const containerWidth = projectsContainer.offsetWidth;
+        const containerLeft = projectsContainer.getBoundingClientRect().left;
         const mouseX = event.clientX - containerLeft;
-        const scrollAmount = newSectionContainer.scrollWidth - containerWidth;
+        const scrollAmount = projectsContainer.scrollWidth - containerWidth;
 
         // Calculate the percentage of cursor position within the container
         const percentage = (mouseX / containerWidth) * 100;
 
-        // Scroll left if cursor is in the left 60% of the container
+        // Scroll left if cursor is in the left 40% of the container
         if (percentage < 40) {
-            newSectionContainer.scrollLeft -= (scrollAmount / 40) * (40 - percentage);
+            projectsContainer.scrollLeft -= (scrollAmount / 40) * (40 - percentage);
         }
-        // Scroll right if cursor is in the right 60% of the container
+        // Scroll right if cursor is in the right 40% of the container
         else if (percentage > 60) {
-            newSectionContainer.scrollLeft += (scrollAmount / 40) * (percentage - 60);
+            projectsContainer.scrollLeft += (scrollAmount / 40) * (percentage - 60);
         }
     });
 });
