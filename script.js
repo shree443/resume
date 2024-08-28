@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('mousemove', movePupils);
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     const projectItems = document.querySelectorAll('.project-item');
 
@@ -134,15 +133,55 @@ document.addEventListener('DOMContentLoaded', function() {
         const video = item.querySelector('video');
         if (video) {
             item.addEventListener('mouseover', () => {
-                console.log('Mouseover on video:', video);
                 video.play().catch(error => console.log('Error playing video:', error));
             });
 
             item.addEventListener('mouseout', () => {
-                console.log('Mouseout from video:', video);
                 video.pause();
                 video.currentTime = 0; // Optionally reset video to the beginning
             });
         }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const elementsWithMessage = document.querySelectorAll('[data-message]');
+    const messageBubble = document.createElement('div');
+    messageBubble.className = 'message-bubble';
+    document.body.appendChild(messageBubble);
+
+    elementsWithMessage.forEach(element => {
+        let timeoutId; // Variable to store the timeout ID
+
+        element.addEventListener('mouseover', function(event) {
+            const message = element.getAttribute('data-message');
+            messageBubble.textContent = message;
+
+            // Calculate position relative to the eyes section
+            const eyesSection = document.querySelector('.eyes-container').getBoundingClientRect();
+            const bubbleHeight = messageBubble.offsetHeight;
+            const bubbleWidth = messageBubble.offsetWidth;
+
+            // Position message bubble on the right side of the eyes section, adjusted upward by 50px
+            messageBubble.style.left = `${eyesSection.right + 70}px`; // 10px offset from the right edge
+            messageBubble.style.top = `${eyesSection.top + (eyesSection.height - bubbleHeight) / 2 - 50}px`; // Center vertically relative to eyes and move 50px up
+
+            messageBubble.classList.add('show-message');
+
+            // Clear any existing timeout
+            clearTimeout(timeoutId);
+
+            // Remove the message bubble after 3 seconds
+            timeoutId = setTimeout(() => {
+                messageBubble.classList.remove('show-message');
+            }, 1500); // 3000 milliseconds = 3 seconds
+        });
+
+        element.addEventListener('mouseout', function() {
+            // Clear any existing timeout when mouse leaves
+            clearTimeout(timeoutId);
+
+            // Optionally, you can remove the message bubble immediately on mouseout if needed
+            messageBubble.classList.remove('show-message');
+        });
     });
 });
