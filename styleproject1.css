@@ -141,8 +141,8 @@ nav h1 {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 20px;
-    padding: 0 45px;
+    gap: 30px; /* Adds space between project cards */
+    padding: 20px 45px; /* Adds space around the scroll area */
     white-space: nowrap;
     scrollbar-width: none;
 }
@@ -153,17 +153,18 @@ nav h1 {
 
 .project-item {
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
     flex: 0 0 auto;
-    width: 80vw;
-    max-width: 800px;
+    width: 60vw; /* Smaller width */
+    max-width: 600px; /* Slightly smaller max size */
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
     transition: box-shadow 0.3s;
+    margin-bottom: 20px;
 }
 
 .project-item:hover {
@@ -191,9 +192,9 @@ nav h1 {
 .image-container {
     position: relative;
     width: 100%;
-    padding-top: 86.25%; /* 16:9 Aspect Ratio */
-    border-radius: 10px; /* Optional: Rounded corners */
-    overflow: hidden; /* Ensures content fits within the container */
+    padding-top: 71.42%; /* 5/7 = ~0.7142 or 71.42% for a 7:5 ratio */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .image-container img {
