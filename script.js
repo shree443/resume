@@ -185,3 +185,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px'; // Close sidebar
+    } else {
+        sidebar.style.left = '0px'; // Open sidebar
+    }
+}
+
+function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'path/to/your/resume.pdf'; // Replace with the actual path to your resume
+    link.download = 'YourName_Resume.pdf';
+    link.click();
+}
+const menuToggle = document.getElementById('menu-toggle');
+    const sideMenu = document.getElementById('side-menu');
+
+    menuToggle.addEventListener('click', () => {
+        sideMenu.style.display = sideMenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Optional: Auto-close menu after clicking a link
+    const menuLinks = sideMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            sideMenu.style.display = 'none';
+        });
+    });
+
+    const menuBtn = document.getElementById('menu-btn');
+    const menuOverlay = document.getElementById('menu-overlay');
+
+    // Open menu on button click
+    menuBtn.addEventListener('click', () => {
+        menuOverlay.classList.add('open');
+    });
+
+    // Close menu if user clicks outside the menu links
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = menuOverlay.contains(event.target);
+        const isMenuBtn = menuBtn.contains(event.target);
+
+        if (!isClickInsideMenu && !isMenuBtn) {
+            menuOverlay.classList.remove('open');
+        }
+    });
+
+    // Automatically close menu when user clicks a menu link
+    document.querySelectorAll('.menu-link').forEach(link => {
+        link.addEventListener('click', () => {
+            menuOverlay.classList.remove('open');
+        });
+    });
